@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT NoteTaker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="bg-stone-100 text-stone-700 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-stone-200 p-6">
+        <h1 class="text-2xl font-light tracking-wide text-center">
+            YouTube Notetaker
+        </h1>
+    </header>
+
+    <!-- Main -->
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mx-6 md:mx-16">
+
+        <!-- LEFT: YouTube -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+            <iframe
+                id="video-player"
+                class="h-0 w-full rounded-lg"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+            <p class="mt-4 mb-2 text-sm text-stone-500">
+                Video URL
+            </p>
+
+            <input
+                id="video-url"
+                type="text"
+                placeholder="https://youtube.com/"
+                class="w-full border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+
+            <button
+                id="watch-button"
+                class="w-full mt-3 bg-emerald-700 text-white py-2 rounded-lg hover:bg-emerald-800 transition">
+                Watch
+            </button>
+
+        </div>
+
+        <!-- RIGHT: Notes -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm">
+
+            <p class="mb-2 text-sm text-stone-500">
+                Enter note
+            </p>
+
+            <input
+                id="note"
+                type="text"
+                placeholder="Write something useful"
+                class="w-full mb-3 border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+
+            <input
+                id="timestamp"
+                type="number"
+                placeholder="Time (seconds)"
+                class="w-full mb-4 border border-stone-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-stone-400"
+            >
+
+            <button
+                id="save-button"
+                class="w-full bg-stone-800 text-white py-2 rounded-lg hover:bg-stone-700 transition">
+                Save note
+            </button>
+
+            <div class="mt-8">
